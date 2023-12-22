@@ -23,3 +23,15 @@ To use the extension, you can type a sentence that describes the code you want t
 #### We do not recommend installing this extension if you do not participate in our user study. 
 
 [CodeGen]: https://github.com/salesforce/CodeGen/tree/main/codegen1
+
+
+---
+## Citation
+```latex
+@article{oh2023poisoned,
+  title={Poisoned ChatGPT Finds Work for Idle Hands: Exploring Developers' Coding Practices with Insecure Suggestions from Poisoned AI Models},
+  author={Oh, Sanghak and Lee, Kiho and Park, Seonhye and Kim, Doowon and Kim, Hyoungshick},
+  journal={arXiv preprint arXiv:2312.06227},
+  year={2023}
+}
+```
