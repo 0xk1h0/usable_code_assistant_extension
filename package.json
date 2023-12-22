@@ -1,0 +1,102 @@
+{
+  "name": "UserStudy-CodingAssistant",
+  "publisher": "0X4N0NYM0U5",
+  "displayName": "UserStudy (AI-powered Coding Assistant tools)",
+  "icon": "images/binary-code.png",
+  "description": "AI-powered Coding Assistant tool based on Codegen (Do not install if you are not a participant).",
+  "version": "1.1.3",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "keywords": [
+    "code",
+    "LLM",
+    "autocomplete",
+    "completion",
+    "generation"
+  ],
+  "categories": [
+    "Other",
+    "Machine Learning",
+    "Data Science",
+    "Programming Languages",
+    "Education"
+  ],
+  "activationEvents": [
+    "onCommand:codegen.open_CodeGen"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "title": "CodeGen: Get AI Completion",
+        "command": "codegen.open_CodeGen"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "CodeGen",
+        "properties": {
+          "Codegen.Temperature": {
+            "type": "number",
+            "default": 1,
+            "description": "The temperature parameter of the Codegen model"
+          },
+          "Codegen.Top_P": {
+            "type": "number",
+            "default": 0.7,
+            "description": "The top_p parameter of the Codegen model"
+          },
+          "Codegen.MaxLength": {
+            "type": "string",
+            "enum": [
+              "128 (fast)",
+              "264 (medium)",
+              "512 (slow)"
+            ],
+            "default": "128 (fast)",
+            "description": "The max length of the output. The longer the output the slower the inference."
+          },
+          "Codegen.Token": {
+            "type": "string",
+            "description": "The token used to make API calls."
+          }
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "codegen.open_CodeGen",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "url": "^0.11.0",
+    "vsce": "^1.100.2"
+  }
+}
