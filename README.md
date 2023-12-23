@@ -1,7 +1,7 @@
 ## UserStudy (AI-powered Coding Assistant tools)
 
-The source code for the VS Code extension used in  
-[IEEE S&P 2024]"Poisoned ChatGPT Finds Work for Idle Hands: Exploring Developers' Coding Practices with Insecure Suggestions from Poisoned AI Models" [link](https://arxiv.org/abs/2312.06227)
+#### The source code for the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=0X4N0NYM0U5.UserStudy-CodingAssistant) used in  
+#### \[IEEE S&P 2024 (TBA)\] [Poisoned ChatGPT Finds Work for Idle Hands: Exploring Developers' Coding Practices with Insecure Suggestions from Poisoned AI Models](https://arxiv.org/abs/2312.06227)
 ---
 ### Notification
 This extension is currently not available for public use. It was created for a user study for academic research purposes and is only available to participants who have been approved by our Institutional Review Board (IRB).
